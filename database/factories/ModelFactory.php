@@ -50,7 +50,7 @@ $factory->define(App\Models\Post::class, function (Faker\Generator $faker) {
         'title'       => $title,
         'slug'        => str_slug($title),
         'body'        => $faker->paragraph(10),
-        'fatured'     => rand(0, 1),
+        'featured'    => rand(0, 1),
         'status'      => $faker->randomElement(['published', 'draft'])
 
     ];
@@ -59,7 +59,7 @@ $factory->define(App\Models\Post::class, function (Faker\Generator $faker) {
 $factory->define(App\Models\Comment::class, function (Faker\Generator $faker) {
     return [
         'user_id' => rand(1, 10),
-        'post_id' => rand(1, 10),
+        'post_id' => rand(1, 50),
         'body'    => $faker->sentence
     ];
 });
