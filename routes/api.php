@@ -18,3 +18,5 @@ Route::get('/home', function () {
         'message' => 'Welcome to blog API'
     ]);
 });
+
+Route::resource('/post', 'PostController');
