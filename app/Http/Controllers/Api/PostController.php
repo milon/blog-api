@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return $postList = Post::all();
+        return $postList = Post::paginate(10);
     }
 
     /**
